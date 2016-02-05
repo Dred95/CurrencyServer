@@ -14,6 +14,7 @@
 	
 	if (strlen($response)<5)
 	{
+		echo "No answer";
 		exit;
 	}
 
