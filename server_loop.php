@@ -11,14 +11,8 @@ echo 'Тестирование управления соединением PHP';
 // либо при нажатии кнопки "Stop".
 while(1)
 {
-    // Завершено ли соединение?
-    if(connection_status() != CONNECTION_NORMAL)
-    {
-        break;
-    }
-	require 'load_data.php';
-
-    sleep(3);
+   require 'load_data.php';
+   sleep(3);
 }
 
 
