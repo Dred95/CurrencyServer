@@ -26,6 +26,9 @@
 
 	$query =" INSERT INTO eurusd (time, bid, ask) VALUES(".$json["EURUSD"]["lasttime"].",".$json["EURUSD"]["bid"].",".$json["EURUSD"]["ask"].")";
 	$result = mysql_query($query);
-	echo $result."<br>";
+	if($result != 1)
+	{
+		echo "Dublicate time: ".$json["EURUSD"]["lasttime"];
+	}
 ?>
 
