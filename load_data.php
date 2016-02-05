@@ -24,7 +24,7 @@
 	mysql_set_charset('utf8');
 
 	$query =" INSERT INTO eurusd (time, bid, ask) VALUES(".$json["EURUSD"]["lasttime"].",".$json["EURUSD"]["bid"].",".$json["EURUSD"]["ask"].")";
-	echo $query;
-	mysql_query($query);
+	$result = mysql_query($query);
+	echo $result."<br>";
 ?>
 
