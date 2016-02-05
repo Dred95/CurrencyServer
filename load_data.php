@@ -23,8 +23,8 @@
 	mysql_select_db('currency');
 	mysql_set_charset('utf8');
 
-	$query =" INSERT INTO eurusd (time, bid, ask) VALUES(".$json["lasttime"].",".$json["bid"].",".$json["ask"].")";
-	echo $qery;
+	$query =" INSERT INTO eurusd (time, bid, ask) VALUES(".$json["EURUSD"]["lasttime"].",".$json["EURUSD"]["bid"].",".$json["EURUSD"]["ask"].")";
+	echo $query;
 	mysql_query($query);
 ?>
 
