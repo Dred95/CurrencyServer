@@ -5,5 +5,5 @@ parentdir="$(dirname "$(pwd)")"
 cd $parentdir
 parentdir="$(dirname "$(pwd)")"
 cd $parentdir
-php $(pwd)/server_loop.php
+php $(pwd)server_loop.php
 
