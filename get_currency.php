@@ -28,7 +28,7 @@
 	    echo "2";
 	    exit;
 	}
-	$row = mysql_fetch_assoc($result)
+	$row = mysql_fetch_assoc($result);
 	echo $row["time"].",";
 	echo $row["bid"].",";
 	echo $row["ask"];
