@@ -1,5 +1,4 @@
 <?php
-header('Content-Type: text/html; charset=UTF-8');
 // Игнорирует отключение пользователя и позволяет скрипту
 // быть запущенным постоянно
 ignore_user_abort(true);
