@@ -21,6 +21,18 @@
 
 	$query ="SELECT * FROM  `eurusd` WHERE TIME >".$lastTime;
 	$result = mysql_query($query);
-	var_dump($result);
+	
+
+	if (mysql_num_rows($result) == 0) {
+	    echo "No rows found, nothing to print so am exiting";
+	    exit;
+	}
+	
+	while ($row = mysql_fetch_assoc($result)) {
+		var_dump($row);
+		echo "<br>".$row["time"];
+		echo $row["bid"];
+		echo $row["ask"]."<br>";
+	}
 ?>
 
