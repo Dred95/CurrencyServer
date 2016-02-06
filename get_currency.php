@@ -12,7 +12,8 @@
 	
 	if (!is_numeric($lastTime))
 	{
-		$lastTime = 0;
+		echo "1";
+		exit;
 	}
 	
 	$link = mysql_connect('localhost','adminSUjpCBH','DMWc-acIGwrP');
@@ -24,15 +25,18 @@
 	
 
 	if (mysql_num_rows($result) == 0) {
-	    echo "No rows found, nothing to print so am exiting";
+	    echo "2";
 	    exit;
 	}
+	$row = mysql_fetch_assoc($result)
+	echo $row["time"].",";
+	echo $row["bid"].",";
+	echo $row["ask"];
 	
 	while ($row = mysql_fetch_assoc($result)) {
-		var_dump($row);
-		echo "<br>".$row["time"];
-		echo $row["bid"];
-		echo $row["ask"]."<br>";
+		echo ";".$row["time"].",";
+		echo $row["bid"].",";
+		echo $row["ask"];
 	}
 ?>
 
