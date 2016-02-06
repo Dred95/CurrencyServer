@@ -1,4 +1,5 @@
 #!/bin/bash
 cd $OPENSHIFT_REPO_DIR
-php $OPENSHIFT_REPO_DIR/server_loop.php
+echo $OPENSHIFT_REPO_DIR
+php server_loop.php
 
