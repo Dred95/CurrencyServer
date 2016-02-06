@@ -1,9 +1,4 @@
 #!/bin/bash
-parentdir="$(dirname "$(pwd)")"
-cd $parentdir
-parentdir="$(dirname "$(pwd)")"
-cd $parentdir
-parentdir="$(dirname "$(pwd)")"
-cd $parentdir
-php $(pwd)server_loop.php
+cd $OPENSHIFT_REPO_DIR
+php $OPENSHIFT_REPO_DIR/server_loop.php
 
