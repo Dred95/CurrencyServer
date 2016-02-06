@@ -14,7 +14,7 @@ $counter = 20;
 while($counter>0)
 {
 	$couner = $counter - 1;
-	require 'load_data.php';
+	require dirname(__FILE__).'/load_data.php';
 	sleep(2);
 }
 
