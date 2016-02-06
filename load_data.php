@@ -25,7 +25,7 @@
 	$result = mysql_query($query);
 	if ($result != 1)
 	{
-		echo "failed query";
+		echo $result." failed query: ".$query;
 	}
 ?>
 
