@@ -1,4 +1,7 @@
 <?php 
+	ini_set('display_errors','On');
+	error_reporting(E_ALL &~ E_DEPRECATED);
+
 	header('Content-Type: text/html; charset=UTF-8');
 	$myCurl = curl_init();
 	curl_setopt_array($myCurl, array(
