@@ -10,7 +10,8 @@
         curl_close($myCurl);
 	
 	if (strlen($response)<5)
-	{
+	{	
+		echo "banned ip";
 		exit;
 	}
 
@@ -22,5 +23,9 @@
 
 	$query =" INSERT INTO eurusd (time, bid, ask) VALUES(".$json["EURUSD"]["lasttime"].",".$json["EURUSD"]["bid"].",".$json["EURUSD"]["ask"].")";
 	$result = mysql_query($query);
+	if ($result != 1)
+	{
+		echo "failed query";
+	}
 ?>
 
