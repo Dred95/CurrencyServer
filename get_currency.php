@@ -23,7 +23,7 @@
 	
 	if (!is_numeric($limit))
 	{
-		echo "2";
+		echo "3";
 		exit;
 	}
 	
