@@ -2,7 +2,8 @@
 	//ini_set('display_errors','off');
 	//error_reporting(E_ALL &~ E_DEPRECATED);
 
-	header('Content-Type: text/html; charset=UTF-8; Access-Control-Allow-Origin: *');
+	header('Content-Type: text/html; charset=UTF-8');
+	header('Access-Control-Allow-Origin: *');
 	$lastTime = $_GET["time"];
 	$limit = $_GET["limit"];
 	if (!$lastTime)
