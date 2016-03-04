@@ -9,9 +9,10 @@
 
 	$query ="SELECT `value` FROM `eurusdprediction` ORDER BY `time`";
 	$result = mysql_query($query);
+	var_dump($result);
 	if ($result != 1)
 	{
-		echo $result."error".mysql_error($link);
+		echo "error".mysql_error($link);
 	}else
 	{
 		echo $result;
