@@ -1,13 +1,12 @@
 <?php 
-	//ini_set('display_errors','On');
-	//error_reporting(E_ALL &~ E_DEPRECATED);
+	ini_set('display_errors','On');
+	error_reporting(E_ALL &~ E_DEPRECATED);
 	header('Content-Type: text/html; charset=UTF-8');
 	
 	$lastTime = $_GET["time"];
 	$value = $_GET["value"];
 	if (!$lastTime)
 	{
-		$lastTime = 0;
 		echo "1";
 		exit;
 	}
