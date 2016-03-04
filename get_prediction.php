@@ -10,13 +10,5 @@
 	$query ="SELECT `value` FROM `eurusdprediction` ORDER BY `time`";
 	$result = mysql_query($query);
 	echo mysql_result($result, 0);
-	echo mysql_result($result, 1);
-	if ($result != 1)
-	{
-		echo "error".mysql_error($link);
-	}else
-	{
-		echo $result;
-	}
 ?>
 
