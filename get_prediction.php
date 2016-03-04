@@ -7,7 +7,7 @@
 	mysql_select_db('currency');
 	mysql_set_charset('utf8');
 
-	$query ="SELECT `value` FROM `eurusdprediction` ORDER BY `time` DESK LIMIT 0,1";
+	$query ="SELECT `value` FROM `eurusdprediction` ORDER BY `time`";
 	$result = mysql_query($query);
 	if ($result != 1)
 	{
