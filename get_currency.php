@@ -6,6 +6,7 @@
 	header('Access-Control-Allow-Origin: *');
 	$lastTime = $_GET["time"];
 	$limit = $_GET["limit"];
+	$sign = $_GET["sign"];
 	if (!$lastTime)
 	{
 		$lastTime = 0;
@@ -26,12 +27,27 @@
 		echo "3";
 		exit;
 	}
+
+	if (!$sign)
+	{
+		$sign = 'eurusd';
+	}
+	
+	if ($sign != 'eurusd')
+	{
+		if($sign != 'usdjpy')
+		{
+			echo "4";
+			exit;
+		}
+	}
+
 	
 	$link = mysql_connect('localhost','adminSUjpCBH','DMWc-acIGwrP');
 	mysql_select_db('currency');
 	mysql_set_charset('utf8');
 
-	$query ="SELECT * FROM  `eurusd` WHERE TIME >".$lastTime." ORDER BY  `time` ASC LIMIT ".$limit;
+	$query ="SELECT * FROM  `".$sign."` WHERE TIME >".$lastTime." ORDER BY  `time` ASC LIMIT ".$limit;
 	$result = mysql_query($query);
 	
 
