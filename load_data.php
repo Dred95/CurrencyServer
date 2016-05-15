@@ -5,7 +5,7 @@
 	header('Content-Type: text/html; charset=UTF-8');
 	$myCurl = curl_init();
 	curl_setopt_array($myCurl, array(
-			CURLOPT_URL => 'https://quotes.instaforex.com/get_quotes.php?q=eurusd&m=json',
+			CURLOPT_URL => 'https://quotes.instaforex.com/api/quotesTick?q=eurusd,usdjpy&m=json',
 			CURLOPT_TIMEOUT_MS => 3100,
 			CURLOPT_RETURNTRANSFER => true
 			));
@@ -30,5 +30,12 @@
 	{
 		echo $result." failed query: ".$query;
 	}
+	$query =" INSERT INTO usdjpy (time, bid, ask) VALUES(".$json["USDJPY"]["lasttime"].",".$json["USDJPY"]["bid"].",".$json["USDJPY"]["ask"].")";
+	$result = mysql_query($query);
+	if ($result != 1)
+	{
+		echo $result." failed query: ".$query;
+	}
+
 ?>
 
