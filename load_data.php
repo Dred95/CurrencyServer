@@ -24,13 +24,13 @@
 	mysql_select_db('currency');
 	mysql_set_charset('utf8');
 
-	$query =" INSERT INTO eurusd (time, bid, ask) VALUES(".$json["EURUSD"]["lasttime"].",".$json["EURUSD"]["bid"].",".$json["EURUSD"]["ask"].")";
+	$query =" INSERT INTO eurusd (time, bid, ask) VALUES(".$json[0]["lasttime"].",".$json[0]["bid"].",".$json[0]["ask"].")";
 	$result = mysql_query($query);
 	if ($result != 1)
 	{
 		echo $result." failed query: ".$query;
 	}
-	$query =" INSERT INTO usdjpy (time, bid, ask) VALUES(".$json["USDJPY"]["lasttime"].",".$json["USDJPY"]["bid"].",".$json["USDJPY"]["ask"].")";
+	$query =" INSERT INTO usdjpy (time, bid, ask) VALUES(".$json[1]["lasttime"].",".$json[1]["bid"].",".$json[1]["ask"].")";
 	$result = mysql_query($query);
 	if ($result != 1)
 	{
